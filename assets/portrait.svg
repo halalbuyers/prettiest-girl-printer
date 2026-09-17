@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" role="img" aria-label="Portrait of a beautiful girl with soft blush pink illustration">
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe9ef"/>
+      <stop offset="0.55" stop-color="#ffdbe7"/>
+      <stop offset="1" stop-color="#f3eaff"/>
+    </linearGradient>
+    <linearGradient id="top-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7b0c4"/>
+      <stop offset="1" stop-color="#e484a0"/>
+    </linearGradient>
+    <linearGradient id="hair-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ba7f57"/>
+      <stop offset="1" stop-color="#9c6543"/>
+    </linearGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="soft-sm" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+  </defs>
+
+  <!-- warm backdrop -->
+  <rect width="400" height="500" fill="url(#bg-grad)"/>
+  <ellipse cx="88" cy="132" rx="110" ry="95" fill="#ffc3d6" opacity="0.4" filter="url(#soft)"/>
+  <ellipse cx="330" cy="390" rx="130" ry="110" fill="#e4d2ff" opacity="0.45" filter="url(#soft)"/>
+  <ellipse cx="200" cy="60" rx="150" ry="58" fill="#fff6ee" opacity="0.55" filter="url(#soft)"/>
+
+  <!-- delicate halo ring -->
+  <circle cx="200" cy="204" r="164" fill="none" stroke="#ffc7d8" stroke-opacity="0.45" stroke-width="7"/>
+
+  <!-- tiny floating petals & sparkles -->
+  <g opacity="0.65">
+    <ellipse cx="92" cy="118" rx="9" ry="5" fill="#ffc4da" transform="rotate(-28 92 118)"/>
+    <ellipse cx="330" cy="182" rx="8" ry="4.5" fill="#e9d4ff" transform="rotate(20 330 182)"/>
+    <ellipse cx="312" cy="92" rx="7" ry="4" fill="#ffc9a3" transform="rotate(-40 312 92)"/>
+    <path d="M120 236 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 Z" fill="#f8cd90"/>
+    <path d="M292 246 l2.5 6.5 6.5 2.5 -6.5 2.5 -2.5 6.5 -2.5 -6.5 -6.5 -2.5 6.5 -2.5 Z" fill="#f3b9c9"/>
+    <path d="M252 122 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2 Z" fill="#dab8f2"/>
+  </g>
+
+  <!-- hair: big soft bob -->
+  <path
+    d="M201,70
+       C330,82 372,190 340,306
+       C330,352 306,378 262,384
+       C238,388 214,376 200,376
+       C186,376 162,388 138,384
+       C94,378 70,352 60,306
+       C28,190 72,82 201,70 Z"
+    fill="url(#hair-grad)"/>
+
+  <!-- hair shine sweeps -->
+  <g stroke="#c98f63" stroke-linecap="round" fill="none" opacity="0.55">
+    <path d="M120,120 C104,180 108,250 128,292" stroke-width="6"/>
+    <path d="M146,92 C136,140 138,200 152,246" stroke-width="4"/>
+    <path d="M300,300 C312,260 310,200 292,148" stroke-width="5"/>
+  </g>
+
+  <!-- neck -->
+  <path d="M178,312 C178,300 222,300 222,312 L222,404 C222,412 178,412 178,404 Z" fill="#ffdfc9"/>
+  <path d="M180,392 C186,398 214,398 220,392" stroke="#f3c9ae" stroke-width="3" fill="none" opacity="0.7"/>
+
+  <!-- face -->
+  <path
+    d="M200,116
+       C260,116 304,160 304,224
+       C304,272 284,300 252,318
+       C232,330 232,338 200,338
+       C168,338 168,330 148,318
+       C116,300 96,272 96,224
+       C96,160 140,116 200,116 Z"
+    fill="#ffdfc9"/>
+
+  <!-- subtle face glow -->
+  <ellipse cx="200" cy="206" rx="86" ry="80" fill="#fff3e9" opacity="0.5" filter="url(#soft-sm)"/>
+
+  <!-- bangs (curtain, gentle waves) -->
+  <path
+    d="M120,216
+       C114,170 142,126 200,124
+       C258,126 286,170 280,216
+       C276,222 268,216 264,206
+       C258,180 236,166 210,164
+       C204,150 196,150 190,164
+       C164,166 142,180 136,206
+       C132,216 124,222 120,216 Z"
+    fill="#a86e4a"/>
+
+  <!-- side locks -->
+  <path
+    d="M118,152
+       C88,208 84,284 124,322
+       C134,333 150,336 150,318
+       C133,302 122,252 134,196
+       C137,178 133,166 126,156 Z"
+    fill="#a86e4a"/>
+  <path
+    d="M282,152
+       C312,208 316,284 276,322
+       C266,333 250,336 250,318
+       C267,302 278,252 266,196
+       C263,178 267,166 274,156 Z"
+    fill="#a86e4a"/>
+  <path d="M150,318 C144,304 152,278 160,256" stroke="#8f5c3c" stroke-width="4" fill="none" opacity="0.6" stroke-linecap="round"/>
+  <path d="M250,318 C256,304 248,278 240,256" stroke="#8f5c3c" stroke-width="4" fill="none" opacity="0.6" stroke-linecap="round"/>
+
+  <!-- eyebrows -->
+  <g stroke="#8a5547" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M154,204 Q169,196 184,203"/>
+    <path d="M216,203 Q231,196 246,204"/>
+  </g>
+
+  <!-- soft happy closed eyes -->
+  <g stroke="#8a5547" stroke-width="3.2" stroke-linecap="round" fill="none">
+    <path d="M150,224 Q168,236 186,224"/>
+    <path d="M214,224 Q232,236 250,224"/>
+  </g>
+  <g stroke="#8a5547" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.75">
+    <path d="M149,222 l-7,-4"/>
+    <path d="M187,222 l6,-5"/>
+    <path d="M251,222 l7,-4"/>
+    <path d="M213,222 l-6,-5"/>
+  </g>
+
+  <!-- rosy blush -->
+  <ellipse cx="152" cy="250" rx="21" ry="12" fill="#f299a0" opacity="0.5" filter="url(#soft)"/>
+  <ellipse cx="248" cy="250" rx="21" ry="12" fill="#f299a0" opacity="0.5" filter="url(#soft)"/>
+
+  <!-- nose -->
+  <path d="M200,242 c0,3 -1,5 -3,7" stroke="#e0a88f" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+
+  <!-- gentle smile -->
+  <path d="M176,281 Q199,296 224,281 Q201,303 176,281 Z" fill="#ec8ea0" stroke="#df7b90" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M181,283 Q200,291 219,283" stroke="#d66d85" stroke-width="1.6" fill="none" opacity="0.8" stroke-linecap="round"/>
+
+  <!-- shoulders & dress -->
+  <path d="M36,500 C52,434 116,402 200,402 C284,402 348,434 364,500 Z" fill="url(#top-grad)"/>
+  <ellipse cx="200" cy="486" rx="158" ry="11" fill="#8c3255" opacity="0.12"/>
+
+  <!-- straps -->
+  <path d="M120,452 C128,428 134,414 138,404" stroke="#d9779c" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M280,452 C272,428 266,414 262,404" stroke="#d9779c" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+  <!-- white collar -->
+  <path d="M116,470 C116,430 154,409 200,409 C246,409 284,430 284,470 C284,476 116,476 116,470 Z" fill="#ffffff" stroke="#f0c9d6" stroke-width="2.5"/>
+  <path d="M164,412 C176,418 176,428 170,436" stroke="#f8dbe4" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M236,412 C224,418 224,428 230,436" stroke="#f8dbe4" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- little heart necklace -->
+  <path d="M188,392 q12,12 24,0" stroke="#d9a8bd" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M200,390 c-3.4,-5.6 -12,-2.4 -12,4.4 c0,5.2 8.6,9.6 12,12.4 c3.4,-2.8 12,-7.2 12,-12.4 c0,-6.8 -8.6,-10 -12,-4.4 Z" fill="#ff7fa0"/>
+
+  <!-- flower hair pin -->
+  <g>
+    <circle cx="268" cy="156" r="5.6" fill="#ff9fb8"/>
+    <circle cx="277" cy="163" r="5.6" fill="#ffb3c6"/>
+    <circle cx="274" cy="173" r="5.6" fill="#ff9fb8"/>
+    <circle cx="264" cy="174" r="5.6" fill="#ffb3c6"/>
+    <circle cx="260" cy="164" r="5.6" fill="#ff9fb8"/>
+    <circle cx="268" cy="167" r="3.6" fill="#ffe2a3"/>
+    <path d="M210,150 l2.4,6.4 6.4,2.4 -6.4,2.4 -2.4,6.4 -2.4,-6.4 -6.4,-2.4 6.4,-2.4 Z" fill="#f6c98f"/>
+  </g>
+</svg>

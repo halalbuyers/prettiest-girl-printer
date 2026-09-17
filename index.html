@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="A magical little website that prints the prettiest girl in the world. 💗" />
+  <meta name="theme-color" content="#ffe3ec" />
+  <title>Print the Prettiest Girl 💗</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💗</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Caveat:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <!-- Soft animated gradient background + floating particles -->
+  <div class="bg" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="blob blob-4"></span>
+  </div>
+  <div class="floats" id="floats" aria-hidden="true"></div>
+
+  <main id="app">
+    <!-- ======================= INITIAL SCREEN ======================= -->
+    <section class="screen home" id="screen-home" aria-labelledby="home-title">
+      <div class="hero-card">
+        <p class="badge" id="home-badge">✨ A very important mission ✨</p>
+
+        <h1 id="home-title">
+          Print the most beautiful<br />
+          <span class="grad">prettiest girl</span> in the world 💗
+        </h1>
+
+        <p class="subtitle">
+          Some people deserve to be framed, not just remembered. 🌷
+        </p>
+
+        <button class="btn btn-print" id="print-btn" type="button">
+          <span class="btn-label">✨ Print Her ✨</span>
+        </button>
+
+        <p class="hint">Warning: She may be dangerously pretty.</p>
+
+        <p class="hint credit">Made by your bebuuu</p>
+      </div>
+    </section>
+
+    <!-- ======================= PRINTING / RESULT STAGE ======================= -->
+    <section class="screen stage" id="print-stage" aria-labelledby="done-title" hidden>
+      <p class="status" id="status-text" aria-live="polite"></p>
+
+      <div class="machine" id="machine">
+        <div class="glow" aria-hidden="true"></div>
+
+        <!-- blooming tulips (appear on the final surprise) -->
+        <div class="tulip tulip-1" style="--d: .25s" aria-hidden="true">
+          <svg viewBox="0 0 24 30" width="26" height="32"><use href="#tulip-glyph"/></svg>
+        </div>
+        <div class="tulip tulip-2" style="--d: .45s" aria-hidden="true">
+          <svg viewBox="0 0 24 30" width="30" height="38"><use href="#tulip-glyph"/></svg>
+        </div>
+        <div class="tulip tulip-3" style="--d: .7s" aria-hidden="true">
+          <svg viewBox="0 0 24 30" width="24" height="30"><use href="#tulip-glyph"/></svg>
+        </div>
+        <div class="tulip tulip-4" style="--d: .95s" aria-hidden="true">
+          <svg viewBox="0 0 24 30" width="28" height="35"><use href="#tulip-glyph"/></svg>
+        </div>
+        <div class="tulip tulip-5" style="--d: 1.15s" aria-hidden="true">
+          <svg viewBox="0 0 24 30" width="22" height="28"><use href="#tulip-glyph"/></svg>
+        </div>
+
+        <!-- printed paper + polaroid card -->
+        <div class="paper-wrap" id="paper-wrap" aria-hidden="true">
+          <div class="paper polaroid" id="paper">
+            <div class="photo">
+              <img
+                src="/image.jpg"
+                alt="The prettiest girl in the world"
+                onerror="this.onerror=null;this.src='public/image.jpg';this.onerror=function(){this.style.display='none';}"
+              />
+              <span class="photo-shine" aria-hidden="true"></span>
+            </div>
+            <p class="caption">Proof that pretty is an understatement. 💗</p>
+          </div>
+        </div>
+
+        <!-- the printer -->
+        <div class="printer" id="printer" aria-hidden="true">
+          <svg viewBox="0 0 320 240" role="presentation">
+            <defs>
+              <linearGradient id="body-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#fff6f3" />
+                <stop offset="1" stop-color="#ffdde9" />
+              </linearGradient>
+              <linearGradient id="front-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffffff" />
+                <stop offset="1" stop-color="#fff0f5" />
+              </linearGradient>
+              <radialGradient id="led-glow" cx="0.5" cy="0.5" r="0.5">
+                <stop offset="0" stop-color="#ff5b8d" stop-opacity=".9" />
+                <stop offset="1" stop-color="#ff5b8d" stop-opacity="0" />
+              </radialGradient>
+              <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="2.4" />
+              </filter>
+            </defs>
+
+            <!-- floor shadow -->
+            <ellipse cx="160" cy="226" rx="132" ry="13" fill="#8a4a63" opacity=".16" />
+
+            <!-- paper feed shelf -->
+            <rect x="70" y="50" width="54" height="18" rx="5" fill="#fff3f0" stroke="#f3c8d8" stroke-width="1.5" />
+            <rect x="196" y="50" width="54" height="18" rx="5" fill="#fff3f0" stroke="#f3c8d8" stroke-width="1.5" />
+            <path d="M124 59 h72" stroke="#f3c8d8" stroke-width="1.5" />
+
+            <!-- main body -->
+            <rect x="50" y="66" width="220" height="140" rx="20" fill="url(#body-grad)" stroke="#f2c7d8" stroke-width="1.6" />
+            <path d="M50 94 h220" stroke="#f1c7d7" stroke-width="1.5" opacity=".7" />
+
+            <!-- front face -->
+            <rect x="62" y="100" width="196" height="88" rx="14" fill="url(#front-grad)" stroke="#f6d3de" stroke-width="1.4" />
+
+            <!-- brand mark -->
+            <text x="84" y="128" font-family="'Caveat','Brush Script MT',cursive" font-size="17" fill="#c96f92" font-weight="600">prettyPrint</text>
+            <text x="84" y="142" font-family="Poppins, sans-serif" font-size="8" letter-spacing="2.5" fill="#d9a7bc">EST. 💗 FOREVER</text>
+
+            <!-- LED strip -->
+            <rect x="198" y="112" width="48" height="16" rx="8" fill="#f8d7e3" stroke="#f2c2d6" stroke-width="1" />
+            <circle class="led" cx="208" cy="120" r="3.4" fill="#ff4f81" filter="url(#led-glow)" />
+            <circle class="led led-2" cx="221" cy="120" r="3.4" fill="#f78ba8" filter="url(#led-glow)" />
+            <circle class="led led-3" cx="234" cy="120" r="3.4" fill="#ac8fd9" filter="url(#led-glow)" />
+
+            <!-- power button -->
+            <circle cx="222" cy="146" r="8" fill="#ffffff" stroke="#f0bcd0" stroke-width="1.6" />
+            <circle cx="222" cy="146" r="3" fill="#f784a3" />
+
+            <!-- output slot (dark) -->
+            <rect x="86" y="170" width="148" height="8" rx="4" fill="#432b38" />
+            <rect x="86" y="178" width="148" height="3" rx="1.5" fill="#f0bcd0" opacity=".8" />
+
+            <!-- cute decals -->
+            <text x="66" y="196" font-size="11" fill="#f5c0d3">✦</text>
+            <text x="252" y="192" font-size="9" fill="#efe0ff">✧</text>
+            <text x="244" y="204" font-size="8" fill="#ffe0ea">♥</text>
+          </svg>
+        </div>
+
+        <!-- secret hover note -->
+        <p class="secret" id="secret" aria-hidden="true">Yep… definitely the prettiest. 🌷</p>
+      </div>
+
+      <!-- result block appears after printing -->
+      <div class="result-block" id="result-block" hidden>
+        <p class="done-title" id="done-title">Printing complete ✨</p>
+        <button class="btn btn-again" id="again-btn" type="button">
+          <span class="btn-label">💞 Print Again</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- shared decorative glyphs -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="tulip-glyph" viewBox="0 0 24 30">
+        <path d="M12 26 C12 19 12 15 12 10" stroke="#b98a6a" stroke-width="1.8" fill="none" stroke-linecap="round" />
+        <path d="M12 15 C9 12 6 12 5 15 C4 18 7 21 12 24 C17 21 20 18 19 15 C18 12 15 12 12 15 Z" fill="#ff9fb3" />
+        <path d="M12 15 C10.5 12 9 11.5 8 13 C7 15 9 18 12 20 M12 15 C13.5 12 15 11.5 16 13 C17 15 15 18 12 20" fill="none" stroke="#e87f9b" stroke-width="1.1" stroke-linecap="round" />
+        <path d="M9 24 C8 21 9 18 11 16" stroke="#9fc08b" stroke-width="1.6" fill="none" stroke-linecap="round" />
+        <path d="M15 23 C15 20 14 18 13 17" stroke="#9fc08b" stroke-width="1.6" fill="none" stroke-linecap="round" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
